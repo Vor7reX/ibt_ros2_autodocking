@@ -1,0 +1,27 @@
+docking_action_server:
+  ros__parameters:
+    phase0_goal_x: 0.13
+    phase0_goal_y: 0.87
+    phase0_goal_yaw_degrees: 0.0
+    phase0_kp_correction: 0.5
+    phase0_max_correction_vel: 0.05
+    phase0_pose_correction_tolerance: 0.005
+
+    target_marker_id: 10
+    marker_size: 0.10
+    goal_offset_z: 0.99
+    num_samples_to_average: 50
+    num_samples_for_verification: 50
+
+    kp_linear_correction: 0.5
+    max_linear_vel: 0.05
+    pose_correction_tolerance: 0.005
+    kp_yaw_correction: 1.0
+    max_angular_vel: 0.25
+    yaw_correction_tolerance: 0.017
+    min_angular_vel: 0.05
+
+    strafe_speed: -0.05
+    final_strafe_offset: 0.05
+    undocking_distance: 0.50
+    charge_verification_timeout: 20.0
