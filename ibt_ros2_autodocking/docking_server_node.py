@@ -153,7 +153,8 @@ class DockingActionServer(Node):
 
         # ArUco dictionary and detection parameters configuration.
         self.aruco_dict = aruco.getPredefinedDictionary(cv2.aruco.DICT_7X7_250) # ArUco marker dictionary.
-        self.aruco_params = cv2.aruco.DetectorParameters_create() # Parameters for the ArUco detector.
+        self.aruco_params = cv2.aruco.DetectorParameters()
+
         # Corner refinement method for higher precision.
         self.aruco_params.cornerRefinementMethod = aruco.CORNER_REFINE_SUBPIX 
 

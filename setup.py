@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 # The name of the ROS 2 package, which must match the directory name.
 package_name = 'ibt_ros2_autodocking'
@@ -16,6 +18,7 @@ setup(
         # Registers the package in the ament_index resource index, necessary for ROS 2 package discovery.
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
+        (os.path.join('share', package_name, 'config'), glob(os.path.join('config', '*'))),
         
         # Includes the package.xml file, which contains crucial metadata about the package (description, dependencies, etc.).
         ('share/' + package_name, ['package.xml']),
